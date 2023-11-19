@@ -1,4 +1,6 @@
 package arrays;
+import javax.swing.JButton;
+
 import processing.core.PApplet;
 import processing.core.PImage;
 
@@ -8,7 +10,7 @@ import processing.core.PImage;
  * In this class:
  * 1. Declare a PImage array variable as a member variable in this class.
  *    DO NOT initialize it.
- * 
+ * 		
  * 2. In the initializePaintings() method, initialize the PImage array to
  *    contain 4 images.
  * 
@@ -50,6 +52,7 @@ public class _03_VanGogh extends PApplet {
     PImage canvas;
     PImage paintbrushCursor;
     boolean initializeCanvas = true;
+    PImage[] imgArr;
     
     /*
      * Write your code below
@@ -57,7 +60,11 @@ public class _03_VanGogh extends PApplet {
     Brush brush;
     
     void initializePaintings() {
-        
+        imgArr = new PImage[4];
+        imgArr[0].loadImage("starryNight.jpg");
+        imgArr[1].loadImage("strawHatPortrait.jpg");
+        imgArr[2].loadImage("wheatField.jpg");
+        imgArr[3].loadImage("painterOnRoad.jpg");
     }
     
     void selectNextPainting() {
